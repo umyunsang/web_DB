@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 리스트</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 128);
+        }
+        table {
+            width: 600px;
+        }
+        #td1 {
+            color: blue;
+            font-weight: bold;
+        }
+        #td2 {
+            color: red;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h3>전체 회원 리스트 (id 순)</h3>
+        <table border="1">
+            <tr>
+                <th>id<th>pw<th>name<th>phone<th>잔액<th>가입일시
+            </tr>
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}" id="td1">id
+                <td th:text="${member.pw}">pw
+                <td th:text="${member.name}">name
+                <td th:text="${member.phone}">phone
+                <td th:text="${member.mileage}" id="td2">mileage
+                <td th:text="${member.rdate}">rdate
+            </tr>
+        </table>
+        <br>
+        <a href="/menu">메뉴로 돌아가기</a>
+    </div>
+</body>
+</html>
