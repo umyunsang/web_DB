@@ -18,12 +18,12 @@
                 <th>id<th>pw<th>name<th>phone<th>잔액<th>가입일시
             </tr>
             <tr th:each="member : ${members}">
-                <td th:text="${member.id}" id="td1">id</td>
-                <td th:text="${member.pw}">pw</td>
-                <td th:text="${member.name}">name</td>
-                <td th:text="${member.phone}">phone</td>
-                <td th:text="${member.mileage}" id="td2">mileage</td>
-                <td th:text="${member.rdate}">rdate</td>
+                <td th:text="${member.id}" id="td1">id
+                <td th:text="${member.pw}">pw
+                <td th:text="${member.name}">name
+                <td th:text="${member.phone}">phone
+                <td th:text="${member.mileage}" id="td2">mileage
+                <td th:text="${member.rdate}">rdate
             </tr>
         </table>
         <br>
