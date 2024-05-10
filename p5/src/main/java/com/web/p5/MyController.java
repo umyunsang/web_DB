@@ -9,13 +9,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MyController {
 
-    @Autowired
-    private memberRep mrep;
+    @Autowired private memberRep mrep;
+    @Autowired private productRep prep;
 
     @GetMapping("/member/list")
     public String memberList(Model model) {
         List<member> members = mrep.findAll();
         model.addAttribute("members", members);
         return "memberList";
+    }
+    @GetMapping("/product/list")
+    public String productList(Model mo) {
+        List<product> arr = prep.findAll();
+        mo.addAttribute("arr", arr);
+        return "productList";  
     }
 }
