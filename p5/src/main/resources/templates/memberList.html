@@ -4,20 +4,10 @@
     <meta charset="UTF-8">
     <title>회원 리스트</title>
     <style>
-        body {
-            background-color: rgb(255, 255, 128);
-        }
-        table {
-            width: 600px;
-        }
-        #td1 {
-            color: blue;
-            font-weight: bold;
-        }
-        #td2 {
-            color: red;
-            text-align: right;
-        }
+        body { background-color: rgb(255, 255, 128); }
+        table { width: 600px; }
+        #td1 { color: blue; font-weight: bold; }
+        #td2 { color: red; text-align: right; }
     </style>
 </head>
 <body>
@@ -28,12 +18,12 @@
                 <th>id<th>pw<th>name<th>phone<th>잔액<th>가입일시
             </tr>
             <tr th:each="member : ${members}">
-                <td th:text="${member.id}" id="td1">id
-                <td th:text="${member.pw}">pw
-                <td th:text="${member.name}">name
-                <td th:text="${member.phone}">phone
-                <td th:text="${member.mileage}" id="td2">mileage
-                <td th:text="${member.rdate}">rdate
+                <td th:text="${member.id}" id="td1">id</td>
+                <td th:text="${member.pw}">pw</td>
+                <td th:text="${member.name}">name</td>
+                <td th:text="${member.phone}">phone</td>
+                <td th:text="${member.mileage}" id="td2">mileage</td>
+                <td th:text="${member.rdate}">rdate</td>
             </tr>
         </table>
         <br>
