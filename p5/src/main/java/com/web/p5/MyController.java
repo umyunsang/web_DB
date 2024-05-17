@@ -35,7 +35,7 @@ public class MyController {
     @PostMapping("/iam/answer")
     public String iamAnswer(@RequestParam("age") String age,
     		@RequestParam("gender") String gender,
-    		@RequestParam("foods") String foods,
+    		@RequestParam("foods") List<String> foods,
     		@RequestParam("face") String face,
     		@RequestParam("grade") String grade,
     		@RequestParam("head") String head,

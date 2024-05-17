@@ -12,8 +12,11 @@
 <body>
 저는 <strong class="blue" th:text="${age}">21</strong>세
 <span class="blue" th:text="${gender}">남</span>학생입니다.<p>
-좋아하는 음식은 다음과 같습니다.<br>
-
+좋아하는 음식은 다음과 같습니다.
+<table>
+	<tr th:each="a : ${foods}">
+		<td class="blue" th:text="${a}">
+</table>
 <p>저의 자심감 수치(1~5)는 다음과 같습니다.<br>
 외모 자신감 : <strong class="blue" th:text="${face}">4</strong><br>
 학점 자신감 : <strong class="blue" th:text="${grade}">5</strong><br>
