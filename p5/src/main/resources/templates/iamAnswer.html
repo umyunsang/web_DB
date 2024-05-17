@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+	body {background-color:green;}
+	.blue {color:blue;}
+	
+</style>
+<body>
+저는 <strong class="blue" th:text="${age}">21</strong>세
+<span class="blue" th:text="${gender}">남</span>학생입니다.<p>
+좋아하는 음식은 다음과 같습니다.<br>
+
+<p>저의 자심감 수치(1~5)는 다음과 같습니다.<br>
+외모 자신감 : <strong class="blue" th:text="${face}">4</strong><br>
+학점 자신감 : <strong class="blue" th:text="${grade}">5</strong><br>
+수업 자신감 : <strong class="blue" th:text="${head}">5</strong><br>
+<p>
+<span th:text="${promote}">근면 성실</span>
+</body>
+</html>
