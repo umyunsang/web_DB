@@ -3,6 +3,7 @@ package com.web.p5;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,14 +36,17 @@ public class MyController {
     @PostMapping("/iam/answer")
     public String iamAnswer(@RequestParam("age") String age,
     		@RequestParam("gender") String gender,
-    		@RequestParam("foods") List<String> foods,
+    		@Nullable String[] foods,
     		@RequestParam("face") String face,
     		@RequestParam("grade") String grade,
     		@RequestParam("head") String head,
     		@RequestParam("promote") String promote, Model mo) {
     	mo.addAttribute("age", age);
     	mo.addAttribute("gender", gender);
-    	mo.addAttribute("foods", foods);
+    	if (foods == null)
+    		mo.addAttribute("foods", "없음");
+    	else
+    		mo.addAttribute("foods", foods);
     	mo.addAttribute("face", face);
     	mo.addAttribute("grade", grade);
     	mo.addAttribute("head", head);
