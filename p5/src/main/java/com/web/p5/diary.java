@@ -14,8 +14,8 @@ public class diary {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //*Auto_increment 사용이 필요 어노테이션
 	public Integer no;
-	public String je;
-	public String nae;
+	public String title;
+	public String content;
 	@CreationTimestamp //* 이런 어노테이션이 있었다 기억
 	public LocalDateTime wdate;
 }

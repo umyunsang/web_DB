@@ -18,12 +18,12 @@ public class DiaryController {
 		return "diary";
 	}
 	@GetMapping("/diary/insert")
-    public String diaryInsert(@RequestParam("je") String je,
-    						@RequestParam("nae") String nae, 
+    public String diaryInsert(@RequestParam("title") String title,
+    						@RequestParam("content") String content, 
     						RedirectAttributes re) {
         diary m = new diary();
-        m.je = je;
-        m.nae = nae;
+        m.title = title;
+        m.content = content;
         drep.save(m);
         
         re.addAttribute("msg", "저장되었습니다.");
