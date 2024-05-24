@@ -15,13 +15,18 @@
         <h3>나의 다이어리 리스트</h3>
         <table border="1">
             <tr>
-                <th>no <th>제목 <th>내용 <th>작성일시
+                <th>no</th>
+                <th>제목</th>
+                <th>내용</th>
+                <th>작성일시</th>
+            </tr>
             <tr th:each="a : ${arr}">
-                <td th:text="${a.no}" class="td1">
-                <td th:text="${a.je}" class="td1">
-                <td th:text="${a.nae}">
-                <td th:text="${a.wdate}" class="td2">
-        </table><p>
+                <td th:text="${a.no}" class="td1"></td>
+                <td th:text="${a.je}" class="td1"></td>
+                <td th:text="${a.nae}"></td>
+                <td th:text="${a.wdate}" class="td2"></td>
+            </tr>
+        </table><br>
         <a href="/diary">작성 화면으로 돌아가기</a>
     </div>
 </body>
