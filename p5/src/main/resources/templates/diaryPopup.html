@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>안내글</title>
+</head>
+<body>
+    <script th:inline="javascript">
+        alert([[${msg}]]);
+        location.href="/diary/list";
+    </script>
+</body>
+</html>
