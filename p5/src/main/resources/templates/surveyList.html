@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8">
+<title>최종 투표 결과</title>
+    <style>
+        body { background-color: rgb(0, 128, 128); }
+        table { width: 800px; }
+        .td1 { color: blue; font-weight: bold; }
+        .td2 { color: gray; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h3>투표 결과</h3>
+        <table border="1">
+            <tr>
+                <th>no <th>설문자id <th>화가 <th>음악가 <th>설문일시
+            <tr th:each="a : ${arr}">
+                <td th:text="${a.no}" >
+                <td th:text="${a.userid}" class="td1">
+                <td th:text="${a.artist}">
+                <td th:text="${a.musician}">
+                <td th:text="${a.sdate}"class="td2">
+        </table><p>
+        <a href="/survery1">시작으로 돌아가기</a>
+    </div>
+</body>
+</html>

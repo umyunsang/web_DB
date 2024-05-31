@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>로그인</title>
+<style>
+	body { background-color: #EFF2FB; }
+	span { color: gray; font-size: 0.7em; }
+	button { margin-right: 20px; }
+	img { width: 280px; height: 330px; }
+	</style></head>
+<body>
+    <div align="center">
+        <h1>Van Gogh AIRLINES</h1>
+        <form method="get" action="/login/check">
+            ID: <input type="text" name="id" required><p>
+            <button>login</button>
+            <a href="/member">회원가입</a><p>
+        </form>
+        <img src="/고흐.jpg" alt="고흐">
+        <br>
+        <span>고흐 초상화 (출처:위키백과)</span>
+    </div>
+</body>
+</html>

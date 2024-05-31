@@ -5,12 +5,14 @@
 <title>설문 결과</title>
 </head>
 <style>
-	body {background-color:lime;}
+	body {background-image:url("/fower.jpg");
+		background-size : cover;}
 	#s1 {color:blue;}
 </style>
 <body>
-<span id="s1" th:text="${mid}">해바라기</span>님은<p>
+<span id="s1" th:text="${userid}">해바라기</span>님은<p>
 <span th:text="${artist}">고흐</span> 화가님과 <p> 
-<span th:text="${musician}">생상스</span> 음악가님을 선택하셨습니다!!
+<span th:text="${musician}">생상스</span> 음악가님을 선택하셨습니다!! <p>
+<a href="/survey/list">결과 보기</a>
 </body>
 </html>

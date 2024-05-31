@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>회원 가입</title>
+<style>
+	body { background-color: #F8ECE0; }
+    fieldset { background-color: #FBF8EF; }
+    button { margin-left: 20px; }
+</style></head>
+<body>
+<form method="get" action="/member/insert">
+	<fieldset><legend><strong>회원 정보를 입력하세요</strong></legend><br>
+	<table>
+	<tr> <td>ID <td><input type="text" name="id" required>
+	<tr> <td>PW <td><input type="text" name="pw" required>
+	<tr> <td>이름 <td><input type="text" name="name" required>
+	<tr> <td>폰 <td><input type="text" name="phone" required>
+	</table><br>
+	</fieldset>
+	<a href="/login">취소(로그인 화면으로)</a>
+	<button>등록</button>
+</form>
+</body>
+</html>
