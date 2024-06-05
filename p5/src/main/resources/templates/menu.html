@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>메뉴</title>
+    <style>
+        body { background-color: lime; }
+        #sp1 { color: blue; }
+    </style>
+</head>
+<body>
+    <h2>MENU</h2><hr>
+    <span id="sp1" th:text="${id}">id</span>님, 어떤 업무를 하시겠습니까?<hr>
+    <ul>
+        <li>항공권 예매
+        <li>예약 조회
+        <li>체크인
+        <li>출도착 조회
+        <li><a href="/myinfo">나의 정보</a>
+        <li>게시판(Q&A)
+        <li><a href="/airinfo" onclick="window.open(this.href, '_blank', 'width=300, height=300, left=300, location=no'); return false;">항공사 정보</a>
+        <li><a href="/logout">로그아웃</a>
+    </ul>
+    <ol th:if="${id}=='admin'">
+        <li><a href="/member/list">전체 회원 리스트 (admin only)</a>
+        <li>전체 출도착 내역 (admin only)
+        <li>게시판 답변 등록 (admin only)
+    </ol>
+</body>
+</html>

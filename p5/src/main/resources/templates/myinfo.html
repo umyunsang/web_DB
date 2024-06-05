@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head><meta charset="UTF-8"><title>나의 정보</title> 
+<style>
+	body {background-color:rgb(185, 253, 130);} 
+	#sp1 { color:blue; } 
+	table { width:300px; } 
+</style></head> 
+<body> 
+<h3><span id="sp1" th:text="${m.id}">id</span>님의 정보</h3> 
+<table> 
+	<tr> <td>비번 <td> <input th:value="${m.pw}" disabled> 
+	<tr> <td>이름 <td> <input th:value="${m.name}" disabled> 
+	<tr> <td>폰 <td> <input th:value="${m.phone}" disabled> 
+	<tr> <td>마일리지 <td> <input th:value="${m.mileage}" disabled> 
+	<tr> <td>가입 일시 <td> <input th:value="${m.rdate}" disabled> 
+</table><p> 
+<a href="/menu">메뉴로 돌아가기</a> 
+</body>
+</html>

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class MyController {
 
@@ -100,5 +102,31 @@ public class MyController {
         mo.addAttribute("url", url);
         return "popup";
     }
+    
+    @GetMapping("/login/check")
+    public String loginCheck(HttpSession se, @RequestParam("id") String id, Model mo, RedirectAttributes re) {
+        if (mrep.existsById(id)) {
+            se.setAttribute("id", id);
+            return "redirect:/menu";
+        } else {
+            re.addAttribute("msg", id + "는 미등록 아이디입니다. 확인 후 로그인 부탁드립니다.");
+            re.addAttribute("url", "/login");
+            return "redirect:/popup";
+        }
+    }
+    @GetMapping("/menu") 
+    public String menu(HttpSession se, Model mo) { 
+    	mo.addAttribute("id", se.getAttribute("id"));
+    	return "menu"; 
+    }
+    
+    @GetMapping("/myinfo") 
+    public String myinfo(HttpSession se, Model mo) { 
+    	String id = (String)se.getAttribute("id"); 
+    	mo.addAttribute("m",mrep.findById(id).get()); 
+    	return "myinfo"; 
+    }
+    
+    
     
 }
