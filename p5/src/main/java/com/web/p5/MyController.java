@@ -20,9 +20,8 @@ public class MyController {
     @Autowired private productRep prep;
 
     @GetMapping("/member/list")
-    public String memberList(Model model) {
-        List<member> members = mrep.findAll();
-        model.addAttribute("members", members);
+    public String memberList(Model mo) {
+        mo.addAttribute("arr", mrep.findAll());
         return "memberList";
     }
     @GetMapping("/product/list")
@@ -126,6 +125,20 @@ public class MyController {
     	mo.addAttribute("m",mrep.findById(id).get()); 
     	return "myinfo"; 
     }
+    
+    @GetMapping("/airinfo") 
+    public String airinfo(Model mo) { 
+    	mo.addAttribute("mcount",mrep.memberCount()); 
+    	return "airinfo"; 
+    }
+    
+    @GetMapping("/logout") 
+    public String logout(HttpSession se, Model mo) { 
+    	mo.addAttribute("id", se.getAttribute("id")); 
+    	se.invalidate(); 
+    	return "logout"; 
+    }
+    
     
     
     

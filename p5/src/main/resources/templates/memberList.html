@@ -15,15 +15,20 @@
         <h3>전체 회원 리스트 (id 순)</h3>
         <table border="1">
             <tr>
-                <th>id<th>pw<th>name<th>phone<th>잔액<th>가입일시
+                <th>id</th>
+                <th>pw</th>
+                <th>name</th>
+                <th>phone</th>
+                <th>잔액</th>
+                <th>가입일시</th>
             </tr>
-            <tr th:each="member : ${members}">
-                <td th:text="${member.id}" id="td1">id
-                <td th:text="${member.pw}">pw
-                <td th:text="${member.name}">name
-                <td th:text="${member.phone}">phone
-                <td th:text="${member.mileage}" id="td2">mileage
-                <td th:text="${member.rdate}">rdate
+            <tr th:each="a : ${arr}">
+                <td th:text="${a.id}" id="td1">id</td>
+                <td th:text="${a.pw}">pw</td>
+                <td th:text="${a.name}">name</td>
+                <td th:text="${a.phone}">phone</td>
+                <td th:text="${a.mileage}" id="td2">mileage</td>
+                <td th:text="${a.rdate}">rdate</td>
             </tr>
         </table>
         <br>

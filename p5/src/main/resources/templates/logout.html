@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org"> <head><meta charset="UTF-8"> <title>logout</title> 
+<style> 
+body { background-color: #FBEFF5;} 
+#s1 { color:blue; } 
+.s2 { color:gray; font-size:0.8em; } 
+img { width: 300px; height: 220px; } 
+</style></head> 
+<body>
+<div align="center"> 
+<span id="s1" th:text="${id}">id</span> 님께서 로그아웃하셨습니다.<p> 
+다음에 또 만나요!!<p> 
+<span class="s2"> (아래 그림을 클릭하시면 첫 화면으로 이동합니다.)</span><br> 
+<a href="/login"><img src="/fower.jpg" alt="바이바이 그림"></a><br> 
+<span class="s2">(그림 출처: N사 웹툰 daehak ilgi)</span> 
+</div> 
+</body></html>
