@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>메뉴</title>
     <style>
+    	iframe { width:600px; height:450px; border:0;}
         body { background-color: lime; }
         #sp1 { color: blue; }
     </style>
@@ -19,6 +20,8 @@
         <li><a href="/myinfo">나의 정보</a>
         <li>게시판(Q&A)
         <li><a href="/airinfo" onclick="window.open(this.href, '_blank', 'width=300, height=300, left=300, location=no'); return false;">항공사 정보</a>
+        <li><a href="/manual.pdf" download>항공사 이용 매뉴얼</a>
+        <li><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.6022609808024!2d128.96591611144507!3d35.11664136066821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c25d14c1764f%3A0x9f345b4d72a391e7!2z64-Z7JWE64yA7ZWZ6rWQIOyKue2Vmey6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1718002550089!5m2!1sko!2skr" target="map">찾아오시는 길</a>
         <li><a href="/logout">로그아웃</a>
     </ul>
     <ol th:if="${id}=='admin'">
@@ -26,5 +29,6 @@
         <li>전체 출도착 내역 (admin only)
         <li>게시판 답변 등록 (admin only)
     </ol>
+<iframe name="map"></iframe>
 </body>
 </html>
